@@ -1,0 +1,11 @@
+azkaban-flow-version: 2.0
+
+---
+config:
+  #failure.emails: 715676363@qq.com
+
+nodes:
+  - name: ods_spider_job
+    type: command
+    config:
+      command: /bin/bash spiderScript/run.sh
