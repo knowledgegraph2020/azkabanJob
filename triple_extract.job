@@ -1,0 +1,12 @@
+azkaban-flow-version: 2.0
+
+---
+config:
+  #failure.emails: 715676363@qq.com
+
+nodes:
+  - name: triple_extract_job
+    type: command
+    dependencies=RiceMilk
+    config:
+      command: /bin/bash te_run.sh
