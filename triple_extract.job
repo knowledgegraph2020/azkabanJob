@@ -7,6 +7,6 @@ config:
 nodes:
   - name: triple_extract_job
     type: command
-    dependencies=RiceMilk
+    dependencies=ods_spider
     config:
-      command: /bin/bash te_run.sh
+      command: /bin/bash triple_extract/te_run.sh
