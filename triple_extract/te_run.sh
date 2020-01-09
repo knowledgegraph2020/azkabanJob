@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+pip3 install pyltp
 # get current datetime
 yesterday=`date -d last-day +%Y-%m-%d`
 echo $yesterday
