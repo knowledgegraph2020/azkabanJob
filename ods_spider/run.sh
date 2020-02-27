@@ -9,6 +9,10 @@ echo $yesterday
 
 echo 'execute NetEaseFinance start......'
 echo 'into RiceMilk root path.......'
-cd /data/RiceMilk
+cd /data/RiceMilk_backup/RiceMilk
 scrapy crawl NetEaseFinance -a start=$yesterday -a end=$yesterday
 echo 'execute NetEaseFinance end......'
+
+echo 'execute sohuFinance start......'
+scrapy crawl sohuFinance
+echo 'execute sohuFinance end......'
