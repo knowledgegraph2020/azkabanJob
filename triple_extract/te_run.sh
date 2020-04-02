@@ -6,5 +6,5 @@ echo $yesterday
 
 echo 'Extract triples.......'
 cd /data/TripleRelation
-python3 triple_extract.py --date $yesterday
+/usr/bin/python3 triple_extract.py --date $yesterday
 echo 'Extract triples end.......'

@@ -1,0 +1,12 @@
+azkaban-flow-version: 2.0
+
+---
+config:
+  #failure.emails: 715676363@qq.com
+
+nodes:
+  - name: subsidiary_news_job
+    type: command
+    dependencies=triple_extract
+    config:
+      command: /bin/bash subsidiary_news/sn_run.sh
