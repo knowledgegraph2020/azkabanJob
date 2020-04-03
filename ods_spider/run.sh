@@ -7,9 +7,19 @@ pip3 install bs4
 yesterday=`date -d last-day +%Y-%m-%d`
 echo $yesterday
 
-echo 'execute NetEaseFinance start......'
 echo 'into RiceMilk root path.......'
-cd /data/RiceMilk_backup/RiceMilk
+cd /data/RiceMilk
+
+
+echo 'execute CfiFinance start......'
+scrapy crawl CfiFinance 
+echo 'execute CfiFinance end......'
+
+echo 'execute CfiFinance-JS start......'
+scrapy crawl CfiFinance -a get_static=False -a get_JS=True
+echo 'execute CfiFinance-JS end......'
+
+echo 'into RiceMilk root path.......'
 scrapy crawl NetEaseFinance -a start=$yesterday -a end=$yesterday
 echo 'execute NetEaseFinance end......'
 
